@@ -1,0 +1,154 @@
+/* 기본 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);
+    backdrop-filter: blur(20px);
+    color: #1e1e1e;
+}
+
+/* 전체 레이아웃 */
+.layout {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 네비게이션 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.nav a:hover {
+    color: #000;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 0 30px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* SECTION */
+.section {
+    margin-top: 60px;
+}
+
+.section-title {
+    margin-bottom: 24px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+
+/* 카드 */
+.card {
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.card > p{
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Projects */
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.project-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;       /* 둥글기 감소 */
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    margin-bottom: 18px;
+    border: 1px solid #eee;
+}
+
+.project-card h4 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.project-card p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Contact */
+.contact p {
+    margin: 6px 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #888;
+    font-size: 13px;
+}
+
+.info-card p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.info-card strong {
+    color: #333;
+    font-weight: 600;
+}
+

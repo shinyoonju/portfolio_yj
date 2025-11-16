@@ -1,0 +1,45 @@
+/* Toggle switch container */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+/* 숨겨진 기본 체크박스 */
+.toggle-switch {
+    display: none;
+}
+
+/* 토글 UI 라벨 */
+.switch-label {
+    width: 55px;
+    height: 28px;
+    background: #cfcfcf;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+/* 동그라미 슬라이더 */
+.switch-label::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* 체크되면 (다크모드) */
+.toggle-switch:checked + .switch-label {
+    background: #6b5de6;
+}
+
+.toggle-switch:checked + .switch-label::after {
+    transform: translateX(27px);
+}
