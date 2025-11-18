@@ -13,6 +13,10 @@ export default function Info() {
                     <p>1997.02.05</p>
                 </div>
                 <div className="info-item">
+                    <strong>🎓 전공</strong>
+                    <p>목원대학교 - 정보통신융합공학부</p>
+                </div>
+                <div className="info-item">
                     <strong>📧 이메일</strong>
                     <p>tlsdbswn5384@naver.com</p>
                 </div>

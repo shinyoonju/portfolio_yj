@@ -4,7 +4,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Info from "./components/Info";
 import Skills from "./components/Skills";
-import Experience from "./components/Experience.jsx";
+import Experience from "./components/Experience";
+import MiniProjects from "./components/personal";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -42,6 +43,7 @@ export default function App() {
                 <Info />
                 <Skills />
                 <Experience />
+                <MiniProjects />
                 <Contact />
                 <Footer />
             </div>

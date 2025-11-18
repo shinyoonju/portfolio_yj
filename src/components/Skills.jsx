@@ -44,23 +44,22 @@ export default function Skills() {
             <h3 className="section-title">Tech Stack</h3>
 
             <div className="card">
-                {Object.entries(categories).map(([category, items]) => (
-
-                        <div className="badge-grid">
-                            {items.map((skill, index) => (
-                                <span
-                                    key={index}
-                                    className="badge icon-badge"
-                                    style={{
-                                        backgroundColor: skill.color,
-                                        color: skill.text || "#fff",
-                                    }}
-                                >
-                  {skill.icon}
-                                    <span className="badge-label">{skill.name}</span>
-                </span>
-                            ))}
-                        </div>
+                {Object.entries(categories).map(([category, items], idx) => (
+                    <div className="badge-grid" key={idx}>
+                        {items.map((skill, index) => (
+                            <span
+                                key={index}
+                                className="badge icon-badge"
+                                style={{
+                                    backgroundColor: skill.color,
+                                    color: skill.text || "#fff",
+                                }}
+                            >
+                        {skill.icon}
+                                <span className="badge-label">{skill.name}</span>
+                    </span>
+                        ))}
+                    </div>
                 ))}
             </div>
         </section>
