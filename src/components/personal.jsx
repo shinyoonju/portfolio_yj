@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { FaJava } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
-import { SiJavascript, SiOracle, SiNodedotjs } from "react-icons/si";
+import { SiJavascript, SiOracle, SiNodedotjs, SiPython  } from "react-icons/si";
 import { IoDocumentTextOutline } from "react-icons/io5";
 
 export default function MiniProjects() {
@@ -14,15 +14,16 @@ export default function MiniProjects() {
         Oracle: { icon: <SiOracle size={16} />, color: "#F80000" },
         JSP: { icon: <IoDocumentTextOutline size={16} />, color: "#0085D1" },
         Etc: { icon: <IoDocumentTextOutline size={16} />, color: "#555" },
+        Python: { icon: <SiPython  size={16} />, color: "#234873" },
     };
 
     // 미니프로젝트 목록
     const projects = [
         {
-            title: "가계부 웹사이트",
-            description: "수입/지출 관리, 통계 차트, 사용자 UI 인터랙션 연습용 프로젝트",
-            stack: ["React", "JavaScript"],
-            github: "https://github.com/your-id/account-book",
+            title: "실시간 경제 현황",
+            description: "한국/미국 주요 지수(KOSPI, KOSDAQ, NASDAQ, S&P500), BTC/ETH 정보를 실시간 API 기반으로 확인하고 UI에서 변동률을 직관적으로 파악할 수 있는 대시보드 프로젝트",
+            stack: ["JSP", "JavaScript","Python","Java"],
+            github: "https://github.com/shinyoonju/economic",
         },
         {
             title: "간단한 게시판 CRUD 예제",
