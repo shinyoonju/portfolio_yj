@@ -21,7 +21,7 @@ export default function MiniProjects() {
     const projects = [
         {
             title: "실시간 경제 현황",
-            description: "한국/미국 주요 지수(KOSPI, KOSDAQ, NASDAQ, S&P500), BTC/ETH 정보를 실시간 API 기반으로 확인하고 UI에서 변동률을 직관적으로 파악할 수 있는 대시보드 프로젝트",
+            description: "한국/미국 주요 지수(KOSPI, KOSDAQ, NASDAQ, S&P500), BTC/ETH 정보를 실시간 API 기반으로 확인하고 UI에서 변동률을 직관적으로 파악할 수 있으며 최신뉴스 TOP10을 확인할 수 있는 대시보드 프로젝트",
             stack: ["JSP", "JavaScript","Python","Java"],
             github: "https://github.com/shinyoonju/economic",
         },
