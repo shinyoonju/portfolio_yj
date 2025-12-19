@@ -220,32 +220,34 @@ body {
 }
 
 /* Skills */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.tag {
-  background: white;
-  padding: 12px 24px;
-  border-radius: 25px;
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #e5e7eb;
   font-size: 14px;
-  font-weight: 500;
-  color: #667eea;
-  border: 2px solid #667eea;
-  transition: all 0.3s;
-  cursor: pointer;
-  opacity: 1;
-  transform: translateY(0);
-
 }
 
-.tag:hover {
-  background: #667eea;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+.badge-icon {
+  display: flex;
+  opacity: 0.85;
+}
+
+.category-title {
+  display: block;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  .icon-badge {
+    background: #f3f4f6;
+    color: #374151;
+  }
 }
 
 /* Projects */
@@ -337,6 +339,17 @@ section {
   scroll-margin-top: 120px; /* 네비바 높이에 맞게 조정 */
 }
 
+.category-section {
+  margin-bottom: 24px;
+}
+
+.category-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
 /* 반응형 */
 @media (max-width: 768px) {
   .hero h2 {
@@ -347,10 +360,6 @@ section {
     padding: 15px 20px;
   }
 
-  .nav {
-    gap: 15px;
-  }
-
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -359,12 +368,35 @@ section {
     padding: 80px 20px 20px;
   }
 
+
+
+
+    .nav {
+      overflow-x: auto;          /* 가로 스크롤 허용 */
+      white-space: nowrap;       /* 줄바꿈 방지 */
+      -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
+      padding-bottom: 6px;
+    }
+
+    .nav a {
+      flex-shrink: 0;            /* 글자가 줄어들지 않게 */
+    }
+
+    .toggle-wrapper {
+      flex-shrink: 0;            /* 토글도 잘리지 않게 */
+    }
+
+    /* 스크롤바 안 보이게 (선택) */
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
 }
 
 
-/*다크모드*/
+
 /* -------------------------
-      🌙 다크모드 스타일
+       다크모드 스타일
 --------------------------- */
 
 html[data-theme="dark"] body {

@@ -1,8 +1,4 @@
-import {
-    FaReact,
-    FaJava,
-    FaGithub,
-} from "react-icons/fa";
+import { FaReact, FaJava, FaGithub } from "react-icons/fa";
 import {
     SiJavascript,
     SiJquery,
@@ -16,49 +12,96 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 export default function Skills() {
     const categories = {
         Frontend: [
-            { name: "React", icon: <FaReact size={20} />, color: "#61DAFB" },
-            { name: "JavaScript", icon: <SiJavascript size={20} />, color: "#F7DF1E", text: "#000" },
-            { name: "jQuery", icon: <SiJquery size={20} />, color: "#0769AD" },
-            { name: "Nexacro", color: "#3A4CA8" },
-            { name: "JSP", icon: <IoDocumentTextOutline size={20} />, color: "#0085D1" },
+            {
+                name: "JavaScript",
+                icon: <SiJavascript size={18} />,
+                iconColor: "#E5C453",
+            },
+            {
+                name: "jQuery",
+                icon: <SiJquery size={18} />,
+                iconColor: "#7AA7C7",
+            },
+            { name: "Nexacro" },
+            {
+                name: "React",
+                icon: <FaReact size={18} />,
+                iconColor: "#7FBEDB",
+            },
         ],
         Backend: [
-            { name: "Java", icon: <FaJava size={20} />, color: "#f89820", text: "#000" },
-            { name: "Spring", icon: <SiSpring size={20} />, color: "#6DB33F" },
-            { name: "Node.js", icon: <SiNodedotjs size={20} />, color: "#3C873A" },
+            {
+                name: "Java",
+                icon: <FaJava size={18} />,
+                iconColor: "#D8A35D",
+            },
+            {
+                name: "Spring",
+                icon: <SiSpring size={18} />,
+                iconColor: "#8FBF7A",
+            },
+            {
+                name: "Node.js",
+                icon: <SiNodedotjs size={18} />,
+                iconColor: "#86B98E",
+            },
         ],
         Database: [
-            { name: "Oracle", icon: <SiOracle size={20} />, color: "#F80000" },
-            { name: "MyBatis", icon: <IoDocumentTextOutline size={20} />, color: "#006600" },
+            {
+                name: "Oracle",
+                icon: <SiOracle size={18} />,
+                iconColor: "#D46A6A",
+            },
+            {
+                name: "MyBatis",
+                icon: <IoDocumentTextOutline size={18} />,
+                iconColor: "#9CA3AF",
+            },
         ],
         Tools: [
-            { name: "GitHub", icon: <FaGithub size={20} />, color: "#F1502F" },
-            { name: "SVN", color: "#333" },
-            { name: "Clip Report", icon: <IoDocumentTextOutline size={20} />, color: "#6633FF" },
-            { name: "Tomcat", icon: <SiApachetomcat size={20} />, color: "#F8DC75", text: "#000" },
+            {
+                name: "GitHub",
+                icon: <FaGithub size={18} />,
+                iconColor: "#9CA3AF",
+            },
+            { name: "SVN" },
+            {
+                name: "Clip Report",
+                icon: <IoDocumentTextOutline size={18} />,
+                iconColor: "#A78BFA",
+            },
+            {
+                name: "Tomcat",
+                icon: <SiApachetomcat size={18} />,
+                iconColor: "#D6C27A",
+            },
         ],
     };
 
     return (
         <section id="skills" className="section">
-            <h3 className="section-title">Tech Stack</h3>
+            <h3 className="section-title">Skills</h3>
 
             <div className="card">
-                {Object.entries(categories).map(([category, items], idx) => (
-                    <div className="badge-grid" key={idx}>
-                        {items.map((skill, index) => (
-                            <span
-                                key={index}
-                                className="badge icon-badge"
-                                style={{
-                                    backgroundColor: skill.color,
-                                    color: skill.text || "#fff",
-                                }}
-                            >
-                        {skill.icon}
-                                <span className="badge-label">{skill.name}</span>
+                {Object.entries(categories).map(([category, items]) => (
+                    <div key={category} className="category-section">
+                        <h4 className="category-title">{category}</h4>
+
+                        <div className="badge-grid">
+                            {items.map((skill) => (
+                                <span key={skill.name} className="badge icon-badge">
+                  {skill.icon && (
+                      <span
+                          className="badge-icon"
+                          style={{ color: skill.iconColor || "inherit" }}
+                      >
+                      {skill.icon}
                     </span>
-                        ))}
+                  )}
+                                    <span className="badge-label">{skill.name}</span>
+                </span>
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>
