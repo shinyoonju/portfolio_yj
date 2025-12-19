@@ -2,32 +2,34 @@ name: Deploy Vite to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # main 브랜치에 push 할 때 자동 배포
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
+          node-version: 18
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - run: npm ci
+      - run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          node-version: "18"
+          path: dist
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages      # 배포용 브랜치
-          folder: dist          # 배포할 폴더
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/deploy-pages@v4
