@@ -43,7 +43,7 @@ export default function App() {
                 <Info />
                 <Skills />
                 <Experience />
-                <MiniProjects />
+                 {/*  <MiniProjects />*/}
                 <Contact />
                 <Footer />
             </div>
