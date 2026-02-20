@@ -30,7 +30,7 @@ export default function Navbar() {
                     <a href="#info">Info</a>
                     <a href="#skills">Skills</a>
                     <a href="#experience">Experience</a>
-                    {/*  <a href="#personal">Side Projects</a>*/}
+                    <a href="#personal">Side Projects</a>
                     <a href="#contact">Contact</a>
 
                     {/* 🔥 다크모드 스위치 */}
