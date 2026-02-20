@@ -22,7 +22,7 @@ export default function Navbar() {
         <nav id="navbar" className="navbar">
             <div className="nav-container">
                 <h1 className="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                    YUNJU PORTFOLIO
+                    YOONJU PORTFOLIO
                 </h1>
 
                 <div className="nav">
